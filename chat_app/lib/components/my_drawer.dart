@@ -1,3 +1,4 @@
+import 'package:chat_app/pages/home_page.dart';
 import 'package:chat_app/services/auth/auth_service.dart';
 import 'package:chat_app/pages/settings_page.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +40,12 @@ class MyDrawer extends StatelessWidget {
               child:ListTile(
                 title : Text("H O M E"),
                 leading : Icon(Icons.home),
-                onTap: () {},
+                onTap: () {
+                   //navigate the home page 
+                  Navigator.push(
+                    context, 
+                    MaterialPageRoute(builder :(context) => HomePage()));
+                },
                 ),
               ),
 
